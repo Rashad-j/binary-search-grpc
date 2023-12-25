@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/rashad-j/go-grpc-search-svc/config"
+	"github.com/rashad-j/go-grpc-search-svc/internal/config"
 	"github.com/rashad-j/go-grpc-search-svc/internal/server"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/rashad-j/go-grpc-search-svc/config"
+	"github.com/rashad-j/go-grpc-search-svc/internal/config"
 )
 
 type SearchService interface {

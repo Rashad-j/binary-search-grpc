@@ -2,7 +2,7 @@ package client
 
 import (
 	"github.com/pkg/errors"
-	"github.com/rashad-j/go-grpc-search-svc/config"
+	"github.com/rashad-j/go-grpc-search-svc/internal/config"
 	"github.com/rashad-j/go-grpc-search-svc/rpc/search"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

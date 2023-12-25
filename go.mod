@@ -4,6 +4,7 @@ go 1.21.5
 
 require (
 	github.com/caarlos0/env v3.5.0+incompatible
+	github.com/golang/mock v1.6.0
 	github.com/pkg/errors v0.9.1
 	github.com/rs/xid v1.5.0
 	github.com/rs/zerolog v1.31.0

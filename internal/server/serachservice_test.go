@@ -5,7 +5,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rashad-j/go-grpc-search-svc/config"
+	"github.com/rashad-j/go-grpc-search-svc/internal/config"
 	"github.com/stretchr/testify/assert"
 )
 
