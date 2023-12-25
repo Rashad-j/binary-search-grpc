@@ -18,6 +18,9 @@ type searchService struct {
 	data []int32
 }
 
+// add a compile time check to ensure that searchService implements the SearchService interface
+var _ SearchService = (*searchService)(nil)
+
 func NewSearchService(cfg *config.Config) SearchService {
 	return &searchService{
 		data: make([]int32, 0, cfg.MaxSize),
