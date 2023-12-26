@@ -64,7 +64,7 @@ func TestMockSearchServiceServer_Search(t *testing.T) {
 
 	ctx := context.Background()
 	req := &search.SearchRequest{
-		TargetNumber: 1,
+		Number: 1,
 	}
 	mockSearchServiceServer.EXPECT().Search(ctx, req).Return(&search.SearchResponse{Position: 0}, nil)
 	searchResponse, err := mockSearchServiceServer.Search(ctx, req)
@@ -76,7 +76,7 @@ func TestMockSearchServiceServer_Search(t *testing.T) {
 	}
 
 	req = &search.SearchRequest{
-		TargetNumber: 2,
+		Number: 2,
 	}
 	mockSearchServiceServer.EXPECT().Search(ctx, req).Return(&search.SearchResponse{Position: 1}, nil)
 	searchResponse, err = mockSearchServiceServer.Search(ctx, req)

@@ -26,7 +26,7 @@ func NewSearchServer(searcher SearchService) *searchServer {
 }
 
 func (s *searchServer) Search(ctx context.Context, req *search.SearchRequest) (*search.SearchResponse, error) {
-	target := req.GetTargetNumber()
+	target := req.GetNumber()
 
 	position := s.searcher.search(ctx, target)
 

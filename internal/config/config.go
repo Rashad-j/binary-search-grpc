@@ -3,7 +3,7 @@ package config
 import "github.com/caarlos0/env"
 
 type Config struct {
-	Addr    string `env:"ADDR" envDefault:":8080"`
+	Addr    string `env:"ADDR" envDefault:":8082"`
 	MaxSize int    `env:"MAX_SIZE" envDefault:"1000000"`
 }
 
