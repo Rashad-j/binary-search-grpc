@@ -1,7 +1,10 @@
 # Remote store and binary search gRPC service
 This gRPC service is used and called by the [RESTful Gateway project](https://github.com/Rashad-j/gateway-grpc).
 
-This microservice provides three methods: `insert`, `delete`, and `search` to maintain an internal data cache. This service store data in an asc array, where data guaranteed to be in an asc order. It uses binary search algorithm for search, whereas for insert it combines binary search to find the insertion position and array shifting to make room for the new element, resulting in an efficient way to insert elements into a sorted slice. Same pattern is applied on delete.
+This microservice provides three methods: `insert`, `delete`, and `search` to maintain an internal data cache. This service store data in an asc array, where data guaranteed to be in an asc order. It uses binary search algorithm for search, whereas for insert it combines binary search to find the insertion position and array shifting to make room for the new element, resulting in an efficient way to insert elements into a sorted slice. Same pattern is applied on delete.Bin
+
+I used binary as it is a preferred choice for searching in large, sorted datasets where minimizing both time and space requirements is crucial.
+Binary search is a time-efficient algorithm with a logarithmic time complexity of `O(log n)`` and a space-efficient algorithm with a constant space complexity of `O(1)``.
 
 ## Design patterns
 This services applies the decorator design pattern for the search service, achieving by that the second principle of the SOLID: open/closed. Other parts of the code also follow the SOLID principle where single responsibility and interface segregation is used extensively.
