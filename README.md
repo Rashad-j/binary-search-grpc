@@ -13,7 +13,9 @@ Simple unit test cases provided to test different cases for `insert`, `delete` a
 This service is built and pushed to docker hub in order to be used in the RESTful gateway. 
 
 ## How to test?
-The default config has a port of `8082`. Have a look on the config package. If you want to change this port, add the env variable to a file called `.env`. To run a docker container, make sure to have `.env` file in your main dir and run `make dockerBuildRun`.
+The default config has a port of `8082`. Have a look on the config package. If you want to change this port, add the env variable to a file called `.env`. To run a docker container, make sure to have `.env` file in your main dir and run `make dockerBuildRun`. 
+
+Note, when the service starts, it will generate some random data up to `100_000`, duplicate elements will be dropped when inserting these random numbers. The aim of this bootstrapping step is to enable you play with the service and test it. 
 
 ### Test using grpcurl
 To test this service you can try calling different methods using `grpcurlSearch`, `grpcurlInsert`, or `grpcurlDelete`. Have a look on the `make` file to learn more.
